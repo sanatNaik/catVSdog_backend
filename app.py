@@ -4,7 +4,7 @@ import numpy as np
 import tensorflow as tf
 from PIL import Image
 import io
-import download_model
+
 
 app = Flask(__name__)
 CORS(app, resources={r"/predict": {"origins":"*"}})
