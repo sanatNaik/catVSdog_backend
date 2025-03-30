@@ -95,7 +95,7 @@ html,body{
 }
 .right-block{
     display: flex;
-    justify-content: right;
+    justify-content: flex-end;
     /* flex-flow: wra; */
     grid-column-start: 5;
     grid-column-end: 7;
