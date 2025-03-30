@@ -66,7 +66,7 @@ html,body{
     grid-column-end: 5;
     grid-row-start: 2;
     grid-row-end:5;
-    
+    z-index: 1;
     border-radius: 20px;
     border: 3px rgba(41, 38, 233, 0.667) solid;
     box-shadow: 4px 4px 8px rgba(195, 183, 183, 0.2);
@@ -97,18 +97,21 @@ html,body{
 .right-block{
     display: flex;
     justify-content: flex-end   ;
-    overflow: hidden;
+    align-items: flex-end;
     /* flex-flow: wra; */
     grid-column-start: 5;
     grid-column-end: 7;
     grid-row-start: 3;
     grid-row-end:7;
+    padding: 0;
+    margin: 0;
+    z-index: 0;
 }
 .right-block img{
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-    overflow: hidden;
+    max-height: 90%;
+    width: auto;
+    object-fit: cover;
+    /* overflow: hidden; */
 }
 /* .bottom-block{
     grid-column-start:1;
