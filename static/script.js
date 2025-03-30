@@ -14,7 +14,7 @@ document.getElementById("submit_button").addEventListener("click",function(event
 
     formData.append("image",fileInput.files[0]);
 
-    fetch("http://localhost:5000/predict",{
+    fetch("https://catvsdog-backend-4.onrender.com",{
         method: "POST",
         body: formData,
     })
