@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 </head>
 <body>
+   <div class="grid-wrapper">
     <div class="Title-block">
         <h1>Cat VS Dog</h1>
         <p>CNN classifier</p>
@@ -34,6 +35,7 @@
     <div class="right-block">
         <img src="{{ url_for('static', filename='dog_image.png') }}"> alt="Image of a Dog">
     </div>
+   </div>
     <!-- <div class="bottom-block">
     </div> -->
     <script src="{{ url_for('static', filename='script.js') }}"></script>
