@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify # type: ignore
+from flask import Flask, request, jsonify, render_template # type: ignore
 from flask_cors import CORS # type: ignore
 import numpy as np
 import tensorflow as tf
@@ -7,9 +7,12 @@ import io
 import download_model
 
 app = Flask(__name__)
-CORS(app, resources={r"/predict": {"origins": "http://127.0.0.1:5500"}})
+CORS(app, resources={r"/predict": {"origins":"*"}})
 
-model = tf.keras.models.load_model('catVdogCNN.h5')
+model = tf.keras.models.load_model('predictor_model.h5')
+@app.route("/")
+def home():
+    return render_template("index.html")
 
 def preprocess_image(image_bytes):
     image = Image.open(io.BytesIO(image_bytes)).resize((128,128))
